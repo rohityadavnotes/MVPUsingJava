@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/colorButtonPressed" />
+
+                    <stroke
+                        android:color="@color/colorButtonPressed"
+                        android:width="@dimen/_1sdp"/>
+
+                    <!-- if you want clear round shape then make radius size is half of your button`s height. -->
+                    <corners
+                        android:bottomLeftRadius="@dimen/_18sdp"
+                        android:bottomRightRadius="@dimen/_18sdp"
+                        android:topLeftRadius="@dimen/_18sdp"
+                        android:topRightRadius="@dimen/_18sdp" />
+
+                    <padding
+                        android:bottom="@dimen/_5sdp"
+                        android:left="@dimen/_10sdp"
+                        android:right="@dimen/_10sdp"
+                        android:top="@dimen/_5sdp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item>
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/colorButtonUnPressed" />
+
+                    <stroke
+                        android:color="@color/colorButtonUnPressed"
+                        android:width="@dimen/_1sdp"/>
+
+                    <!-- if you want clear round shape then make radius size is half of your button`s height. -->
+                    <corners
+                        android:bottomLeftRadius="@dimen/_18sdp"
+                        android:bottomRightRadius="@dimen/_18sdp"
+                        android:topLeftRadius="@dimen/_18sdp"
+                        android:topRightRadius="@dimen/_18sdp" />
+
+                    <padding
+                        android:bottom="@dimen/_5sdp"
+                        android:left="@dimen/_10sdp"
+                        android:right="@dimen/_10sdp"
+                        android:top="@dimen/_5sdp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

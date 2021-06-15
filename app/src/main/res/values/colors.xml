@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#800080</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#800080</color>
+
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorPlaceHolder">#e3e3e3</color>
+
+    <color name="colorSearchSold">#f0f0f0</color>
+    <color name="colorSearchStroke">#cccccc</color>
+
+    <color name="colorDotProgressActive">#800080</color>
+    <color name="colorDotProgressInActive">#FFFFFF</color>
+
+    <color name="colorDialogButtonUnPressed">#800080</color>
+    <color name="colorDialogButtonPressed">#550755</color>
+
+    <!-- EditText colors -->
+    <color name="colorBorder">#800080</color>
+    <color name="colorActiveHint">#800080</color>
+    <color name="colorInactiveHint">#800080</color>
+    <color name="colorError">#FF0000</color>
+
+    <color name="colorCounter">#FF0000</color>
+    <color name="colorCounterOverflow">#FF0000</color>
+
+    <!-- Button colors -->
+    <color name="colorButtonUnPressed">#800080</color>
+    <color name="colorButtonPressed">#550755</color>
+
+    <!-- Button colors -->
+    <color name="retryButtonStrokeColor">#AAADC4</color>
+    <color name="retryButtonUnPressedColor">#33AAADC4</color>
+    <color name="retryButtonPressedColor">#AAADC4</color>
+
+    <!-- Badge count text colors -->
+    <color name="badgeBorderColor">#000000</color>
+    <color name="badgeInsideColor">#E91E63</color>
+</resources>

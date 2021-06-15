@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- The primary branding color for the app. By default, this is the color applied to the action bar background. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- Dark variant of the primary branding color. By default, this is the color applied to the status bar (via statusBarColor) and navigation bar (via navigationBarColor). -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- Bright complement to the primary branding color. By default, this is the color applied to framework controls (via colorControlActivated). -->
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- The color applied to framework controls in their normal state. -->
+        <item name="colorControlNormal">@color/amber_500</item>
+
+        <!-- The color applied to framework controls in their activated (ex. checked) state. -->
+        <item name="colorControlActivated">@color/green_500</item>
+
+        <!-- The color applied to framework control highlights (ex. ripples, list selectors). -->
+        <item name="colorControlHighlight">@color/teal_500</item>
+
+        <!-- The color applied to framework buttons in their normal state. -->
+        <item name="colorButtonNormal">@color/red_500</item>
+
+        <!-- The color applied to framework switch thumbs in their normal state. -->
+        <item name="colorSwitchThumbNormal">@color/transparent_gray</item>
+
+        <!-- Inactive track color(75% transparency) -->
+        <item name="android:colorForeground">@color/transparent_gray_dark</item>
+
+        <!-- Scroll Effect color -->
+        <item name="android:colorEdgeEffect">@color/blue_500</item>
+
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+    </style>
+
+    <style name="AppBaseTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBaseTheme.NoActionBar.StatusBar">
+        <item name="colorPrimaryDark">@color/purple</item>
+    </style>
+
+    <style name="AppBaseTheme.NoActionBar.StatusBar.OverflowMenu">
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Required for pre-Lollipop. -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:popupBackground">@color/purple</item>
+
+        <!-- Required for Lollipop. -->
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">4.6dip</item>
+
+        <!--menu菜单的字体颜色-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!--menu字体大小-->
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorControlActivated">@color/colorButtonPressed</item>
+        <item name="android:colorControlHighlight">@color/colorButtonPressed</item>
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <!-- Splash screen theme. You should use it in your manifest file for your SplashActivity -->
+    <style name="AppBaseTheme.NoActionBar.Launcher">
+        <item name="android:windowBackground">@drawable/splash_screen_layer</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
+    </style>
+
+    <style name="DayTheme">
+    </style>
+
+    <style name="NightTheme">
+    </style>
+</resources>

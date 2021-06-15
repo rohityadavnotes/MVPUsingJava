@@ -1,0 +1,81 @@
+apply plugin: 'com.android.library'
+
+def keystorePropertiesFileName = rootProject.file("keystore/keystore.properties");
+def keystoreProperties = new Properties()
+if (keystorePropertiesFileName.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFileName))
+}
+
+def androidVersions = rootProject.ext.projectConfiguration
+def androidDependencies = rootProject.ext
+
+android {
+
+    compileSdkVersion androidVersions.compileSdk
+
+    defaultConfig {
+        minSdkVersion androidVersions.minSdk
+        targetSdkVersion androidVersions.targetSdk
+        versionCode androidVersions.versionCode
+        versionName androidVersions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':library-checknetworkconnectivity')
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "androidx.appcompat:appcompat:$androidDependencies.appcompat"
+    implementation project(path: ':library-utilities')
+    testImplementation "junit:junit:$androidDependencies.jUnit"
+    androidTestImplementation "androidx.test.ext:junit:$androidDependencies.testJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidDependencies.espressoCore"
+
+    /* Dependency Injection Framework */
+    implementation "com.google.dagger:dagger:$androidDependencies.dagger"
+    annotationProcessor "com.google.dagger:dagger-compiler:$androidDependencies.dagger"
+    implementation "com.google.dagger:dagger-android:$androidDependencies.dagger"
+    implementation "com.google.dagger:dagger-android-support:$androidDependencies.dagger"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$androidDependencies.dagger"  /* if you use the support libraries */
+
+    /* RxJava & RxAndroid */
+    implementation "io.reactivex.rxjava2:rxjava:$androidDependencies.rxJava"
+    implementation "io.reactivex.rxjava2:rxandroid:$androidDependencies.rxAndroid"
+
+    /* Retrofit & OkHttp Libraries */
+    implementation "com.squareup.okhttp3:okhttp:$androidDependencies.okHttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$androidDependencies.loggingInterceptor"
+    implementation "com.squareup.retrofit2:retrofit:$androidDependencies.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$androidDependencies.retrofitGsonConverter"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$androidDependencies.rxJavaAdapter" /* optional - RxJava support for Retrofit */
+
+    /* Picasso Libraries */
+    implementation "com.squareup.picasso:picasso:$androidDependencies.picasso"
+
+    /* Glide Libraries */
+    implementation "com.github.bumptech.glide:glide:$androidDependencies.glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$androidDependencies.glide"
+
+    /**
+     * Logging Interceptor
+     * link : https://github.com/ihsanbal/LoggingInterceptor
+     */
+    implementation('com.github.ihsanbal:LoggingInterceptor:3.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+}

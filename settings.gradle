@@ -1,0 +1,10 @@
+include ':library-network'
+include ':library-sharedpreferences'
+include ':library-customdialog'
+include ':library-numberprogressbar-two'
+include ':library-numberprogressbar-one'
+include ':library-crashreporter'
+include ':library-utilities'
+include ':library-checknetworkconnectivity'
+include ':app'
+rootProject.name = "MVP Using Java"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is for border bottom but you can change this according to your need -->
+    <item android:right="-4dp">
+        <shape>
+            <solid android:color="@color/white" />
+
+            <stroke
+                android:width="@dimen/_1sdp"
+                android:color="@color/purple" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/_25sdp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="@dimen/_25sdp"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+</layer-list>
